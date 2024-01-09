@@ -5,7 +5,6 @@ import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { setAuthentication } from "../utils/loginSlice";
-import { addItem } from "../utils/cartSlice.js";
 import { addToCart } from "../utils/cart.js";
 
 const Products = () => {

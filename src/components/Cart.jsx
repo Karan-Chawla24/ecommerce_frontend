@@ -28,7 +28,6 @@ const Cart = () => {
 
   useEffect(() => {
     getCartData();
-    // console.log("length", cartData[0].length);
   }, []);
 
   const calculateTotalCost = useMemo(() => {
@@ -81,14 +80,15 @@ const Cart = () => {
         data: { key },
       } = await axios.get(`${server}/getkey`);
       const data = await checkoutHandler(totalCost);
-      const {currentUserInfo} = data;
+      const { currentUserInfo } = data;
       const options = {
         key,
         amount: totalCost,
         currency: "INR",
         name: "Acme Corp",
         description: "Test Transaction",
-        image: "https://example.com/your_logo",
+        image:
+          "https://images.unsplash.com/photo-1647462659318-1e9702f92b5b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGF5bWVudCUyMGxvZ298ZW58MHx8MHx8fDA%3D",
         order_id: data.order.id,
         callback_url: `${server}/paymentverification`,
         prefill: {
