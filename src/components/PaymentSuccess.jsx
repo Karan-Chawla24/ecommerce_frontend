@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../stylesheets/success.css";
 import { Link, useParams } from "react-router-dom";
 
 const PaymentSuccess = () => {
   const { reference_id } = useParams();
-  return { reference_id } ? (
+  useEffect(() => {
+    console.log('PaymentSuccess rendered with reference ID:', reference_id);
+  }, [reference_id]);
+  return (
+    <>
     <div className="success-body">
       <div className="card">
         <div className="border border-r-gray-200 h-52 w-52 bg-white m-auto">
@@ -30,9 +34,9 @@ const PaymentSuccess = () => {
         Continue Shopping
       </Link>
     </div>
-  ) : (
-    <h1>Loading...</h1>
-  );
+    </>
+  ) 
+
 };
 
 export default PaymentSuccess;
