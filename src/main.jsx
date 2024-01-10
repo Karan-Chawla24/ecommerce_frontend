@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     element: [<Cart />, <Navbar />],
   },
   {
-    path: "/:reference_id",
+    path: "/paymentsuccess/:reference_id",
     element: <PaymentSuccess />
   },
   {
