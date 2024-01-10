@@ -1,6 +1,5 @@
 import axios from "axios";
 import { server } from "../main";
-// import { server } from "../../../src/main";
 
 export const getCartItems = async () => {
   try {
@@ -10,7 +9,6 @@ export const getCartItems = async () => {
       },
       withCredentials: true,
     });
-    console.log("cartData", data.cartItems);
     return data.cartItems;
   } catch (error) {
     console.log(error);
@@ -32,7 +30,6 @@ export const addToCart = async (productId) => {
     if (!data) {
       throw new Error("Failed to add item to cart");
     }
-    console.log("postData", data);
     return data;
   } catch (error) {
     console.log(error);
@@ -50,7 +47,6 @@ export const removeProduct = async (productId) => {
     if (!data) {
       throw new Error("Failed to remove item from cart");
     }
-    console.log("postData", data);
     return data;
   } catch (error) {
     console.log(error);
@@ -74,7 +70,6 @@ export const checkoutHandler = async (amount) => {
     if (!data)  {
       throw new Error("Failed to remove item from cart");
     }
-    // console.log("postData", data);
     return data;
   } catch (error) {
     console.log("error", error);

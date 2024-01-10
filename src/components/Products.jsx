@@ -19,7 +19,6 @@ const Products = () => {
         withCredentials: true,
       });
       setProducts(data.products);
-      console.log(data.products);
       if (isLoggedIn) {
         toast.success(data.message);
       } else if (data.message.length === 0) {

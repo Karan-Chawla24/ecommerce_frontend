@@ -62,7 +62,6 @@ const Cart = () => {
   const handleRemoveFromCart = async (productId) => {
     try {
       const data = await removeProduct(productId);
-      console.log("data new", data);
       if (!data) {
         toast.error("failed to load data");
         return;

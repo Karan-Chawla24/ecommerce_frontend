@@ -8,7 +8,6 @@ const Profile = () => {
   const userProfile = async () => {
     try {
       const data = await getMyProfile();
-      console.log(data.user);
       setUserData(data.user);
       setLoading(true);
     } catch (error) {

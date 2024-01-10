@@ -8,7 +8,6 @@ import toast from "react-hot-toast";
 const Landing = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
-  console.log(id);
   const singleProduct = async () => {
     try {
       const { data } = await axios.get(`${server}/product/${id}`, {

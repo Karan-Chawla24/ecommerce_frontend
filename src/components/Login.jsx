@@ -54,7 +54,6 @@ const Login = () => {
 
   return (
     <form method="post" onSubmit={submitHandler}>
-      {console.log("Login called")}
       <div className="signup-1 flex items-center relative h-screen">
         <div className="overlay absolute inset-0 z-0 bg-black opacity-75"></div>
         <div className="container px-4 mx-auto relative z-10">
