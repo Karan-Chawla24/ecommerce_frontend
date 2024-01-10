@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 
 const PaymentSuccess = () => {
   const { reference_id } = useParams();
-  return (
+  return { reference_id } ? (
     <div className="success-body">
       <div className="card">
         <div className="border border-r-gray-200 h-52 w-52 bg-white m-auto">
@@ -30,6 +30,8 @@ const PaymentSuccess = () => {
         Continue Shopping
       </Link>
     </div>
+  ) : (
+    <h1>Loading...</h1>
   );
 };
 
