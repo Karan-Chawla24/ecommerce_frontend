@@ -5,12 +5,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SignUp from "./components/SignUp.jsx";
 import { Toaster } from "react-hot-toast";
-// import Products from "../frontend/src/components/Products.jsx";
-// import Navbar from "../frontend/src/components/Navbar.jsx";
 import store from "./utils/store.js";
 import { Provider } from "react-redux";
-// import Landing from "../frontend/src/components/Landing.jsx";
-// import Cart from "../frontend/src/components/Cart.jsx";
 import PaymentSuccess from "./components/PaymentSuccess.jsx";
 import Products from "./components/Products.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -42,7 +38,7 @@ const router = createBrowserRouter([
     element: [<Cart />, <Navbar />],
   },
   {
-    path: "/paymentsuccess/:reference_id",
+    path: "/:reference_id",
     element: <PaymentSuccess />
   },
   {
