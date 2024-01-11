@@ -103,6 +103,12 @@ const Cart = () => {
         },
       };
       var rzp1 = new window.Razorpay(options);
+      rzp1.on("payment.success", async function (response) {
+        console.log("Payment success:", response);
+
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      });
+
       rzp1.open();
     } catch (error) {
       console.log(error);
