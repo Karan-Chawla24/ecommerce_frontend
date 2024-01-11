@@ -107,7 +107,7 @@ const Cart = () => {
         console.log("Payment success:", response);
 
         await new Promise((resolve) => setTimeout(resolve, 2000));
-        window.location.replace(
+        window.location.href(
           `https://ecommerce-frontend-fawn-alpha.vercel.app/paymentsuccess/${response.razorpay_payment_id}`
         );
       });
