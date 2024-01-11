@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import "../stylesheets/success.css";
-import { Link, useParams, useRouteMatch } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const PaymentSuccess = () => {
   const { reference_id } = useParams();
-  const match = useRouteMatch();
 
   useEffect(() => {
     console.log("PaymentSuccess rendered with reference ID:", reference_id);
-    console.log("success route", match);
   }, [reference_id]);
   return (
     <>
