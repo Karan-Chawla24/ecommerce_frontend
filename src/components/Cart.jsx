@@ -107,6 +107,7 @@ const Cart = () => {
         console.log("Payment success:", response);
 
         await new Promise((resolve) => setTimeout(resolve, 2000));
+        window.location.href = `/paymentsuccess/${response.razorpay_payment_id}`;
       });
 
       rzp1.open();
