@@ -8,7 +8,7 @@ const PaymentSuccess = () => {
 
   useEffect(() => {
     console.log("PaymentSuccess rendered with reference ID:", reference_id);
-    console.log("route", match);
+    console.log("success route", match);
   }, [reference_id]);
   return (
     <>
