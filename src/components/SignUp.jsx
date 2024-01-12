@@ -4,6 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import { server } from "../main";
 import toast from "react-hot-toast";
 import { setAuthentication } from "../utils/loginSlice.js";
+import { useDispatch } from "react-redux";
 
 const SignUp = () => {
   const [userData, setUserData] = useState({
@@ -11,7 +12,7 @@ const SignUp = () => {
     email: "",
     password: "",
   });
-
+  const dispatch = useDispatch();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleChange = (e) => {
