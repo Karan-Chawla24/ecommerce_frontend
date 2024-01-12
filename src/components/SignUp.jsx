@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { server } from "../main";
 import toast from "react-hot-toast";
+import { setAuthentication } from "../utils/loginSlice.js";
 
 const SignUp = () => {
   const [userData, setUserData] = useState({
@@ -35,15 +36,18 @@ const SignUp = () => {
           withCredentials: true,
         }
       );
+      dispatch(setAuthentication(true));
       toast.success(data.message);
-
+      setIsAuthenticated(true);
       setUserData({
         name: "",
         email: "",
         password: "",
       });
     } catch (error) {
+      dispatch(setAuthentication(false));
       toast.error(error.response.data.message);
+      setIsAuthenticated(false);
       setUserData({
         name: "",
         email: "",

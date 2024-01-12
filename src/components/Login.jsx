@@ -39,6 +39,7 @@ const Login = () => {
       toast.success(data.message);
       setIsAuthenticated(true);
     } catch (error) {
+      dispatch(setAuthentication(false));
       toast.error(error.response.data.message);
       setAuthentication(false);
       setUserData({
