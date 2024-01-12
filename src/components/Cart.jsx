@@ -102,7 +102,7 @@ const Cart = () => {
           color: "#3399cc",
         },
       };
-      var rzp1 = new window.Razorpay(options);
+      const rzp1 = new window.Razorpay(options);
       rzp1.open();
     } catch (error) {
       console.log(error);

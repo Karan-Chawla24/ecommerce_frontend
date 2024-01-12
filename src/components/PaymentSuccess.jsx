@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import "../stylesheets/success.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const PaymentSuccess = () => {
-  // const { reference_id } = useParams();
+  const seachQuery = useSearchParams()[0];
 
-  // useEffect(() => {
-  //   console.log("PaymentSuccess rendered with reference ID:", reference_id);
-  // }, [reference_id]);
+  const referenceNum = seachQuery.get("reference");
   return (
     <>
       <div className="success-body">
@@ -19,7 +17,7 @@ const PaymentSuccess = () => {
           <p>
             We received your purchase request;
             <br /> we'll be in touch shortly!
-            {/* <br /> OrderID: {reference_id} */}
+            <br /> OrderID: {referenceNum}
           </p>
         </div>
         <Link
