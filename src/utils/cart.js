@@ -55,9 +55,7 @@ export const removeProduct = async (productId) => {
 
 export const checkoutHandler = async (amount) => {
   try {
-    const {
-      data,
-    } = await axios.post(
+    const { data } = await axios.post(
       `${server}/checkout`,
       { amount },
       {
@@ -67,11 +65,26 @@ export const checkoutHandler = async (amount) => {
         },
       }
     );
-    if (!data)  {
+    if (!data) {
       throw new Error("Failed to remove item from cart");
     }
     return data;
   } catch (error) {
     console.log("error", error);
+  }
+};
+
+export const getOrderHistory = async () => {
+  try {
+    const { data } = await axios.get(`${server}/orderhistory`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    });
+    console.log("order", data);
+    return data;
+  } catch (error) {
+    console.log(error);
   }
 };

@@ -55,6 +55,9 @@ const Navbar = () => {
               <Link to={"/cart"}>Cart</Link>
             </li>
             <li>
+              <Link to={"/orderhistory"}>OrderHistory</Link>
+            </li>
+            <li>
               <Link onClick={logoutHandler} to={"/"}>
                 Logout
               </Link>

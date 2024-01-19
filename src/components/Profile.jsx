@@ -51,26 +51,14 @@ const Profile = () => {
               Projects
             </span>
           </div>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              className="inline-flex w-auto cursor-pointer select-none appearance-none items-center justify-center space-x-1 rounded border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-800 transition hover:border-gray-300 active:bg-white hover:bg-gray-100 focus:border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300"
-            >
-              Send Message
-            </button>
-            <button
-              type="button"
-              className="inline-flex w-auto cursor-pointer select-none appearance-none items-center justify-center space-x-1 rounded border border-gray-200 bg-blue-700 px-3 py-2 text-sm font-medium text-white transition hover:border-blue-300 hover:bg-blue-600 active:bg-blue-700 focus:blue-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            >
-              Add to projects
-            </button>
-          </div>
           <h4 className="text-md font-medium leading-3">About</h4>
           <p className="text-sm text-stone-500">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-            dolores aliquid sequi sunt iusto ipsum earum natus omnis asperiores
-            architecto praesentium dignissimos pariatur, ipsa cum? Voluptate
-            vero eius at voluptas?
+            Enthusiastic and results-driven Full Stack Developer with [X years]
+            of experience in designing and implementing web applications.
+            Proficient in both front-end and back-end technologies, with a
+            strong focus on creating efficient, scalable, and maintainable code.
+            Adept at collaborating with cross-functional teams to deliver
+            high-quality software solutions.
           </p>
         </div>
       </div>
