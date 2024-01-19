@@ -206,7 +206,7 @@ const Cart = () => {
                 </Link>
               </div>
 
-              {cartData.length !== 0 ? (
+              {cartData && cartData[0]?.products && cartData[0]?.products.length > 0 ? (
                 <div id="summary" className="w-1/4 px-8 py-10">
                   <h1 className="font-semibold text-2xl border-b pb-8">
                     Order Summary
@@ -249,8 +249,8 @@ const Cart = () => {
                     </button>
                   </div>
                 </div>
-              ) : (
-                <div>Cart is empty!</div>
+              ): (
+                <div className="font-bold text-gray-800 text-2xl text-center mt-24 ml-7"><h1>Cart is Empty!</h1></div>
               )}
             </div>
           </div>
